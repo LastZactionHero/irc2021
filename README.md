@@ -1,5 +1,7 @@
 # IRC 2021 Chatbot
 
+Chat with the 2021 IRC building code
+
 ## 1. Download
 
 `python3 ./downloader.py`
