@@ -1,0 +1,4 @@
+"./markdown/*.md"
+"./dump/*.html"
+"./storage/*.json"
+secrets
