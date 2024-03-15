@@ -18,14 +18,14 @@ if os.path.exists("./storage/docstore.json"):
     storage_context = StorageContext.from_defaults(persist_dir="./storage")
     index = load_index_from_storage(storage_context)
 else:
-    documents = SimpleDirectoryReader("./markdown").load_data()
+    documents = SimpleDirectoryReader("./merged").load_data()
     service_context = ServiceContext.from_defaults(chunk_size=512)
     index = VectorStoreIndex.from_documents(documents, service_context=service_context, show_progress=True)
     index.storage_context.persist(persist_dir="./storage")
 
 retriever = VectorIndexRetriever(
     index=index,
-    similarity_top_k=10,
+    similarity_top_k=20,
 )
 response_synthesizer = get_response_synthesizer()
 # query_engine = index.as_query_engine()
@@ -33,7 +33,7 @@ response_synthesizer = get_response_synthesizer()
 query_engine = RetrieverQueryEngine(
     retriever=retriever,
     response_synthesizer=response_synthesizer,
-    node_postprocessors=[SimilarityPostprocessor(similarity_cutoff=0.7)],
+    node_postprocessors=[SimilarityPostprocessor(similarity_cutoff=0.5)],
 )
 
 

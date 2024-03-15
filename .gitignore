@@ -1,5 +1,6 @@
 markdown/*.md
 dump/*.html
+merged/*.md
 storage/*.json
 secrets
 

@@ -37,7 +37,7 @@ def concatenate_markdown_files(markdown_dir):
             concatenated_content.append(processed_content)
     
     # Write concatenated content to out.md
-    with open("out.md", 'w', encoding='utf-8') as file:
+    with open("./merged/out.md", 'w', encoding='utf-8') as file:
         file.write('\n\n'.join(concatenated_content))
 
 # Example usage
