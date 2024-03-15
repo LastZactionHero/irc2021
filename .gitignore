@@ -1,4 +1,74 @@
-"./markdown/*.md"
-"./dump/*.html"
-"./storage/*.json"
+markdown/*.md
+dump/*.html
+storage/*.json
 secrets
+
+# macOS
+.DS_Store
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+# Swift Package Manager
+.build/
+
+# CocoaPods
+Pods/
+*.lock
+DerivedData/
+.idea/
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+
+# Playgrounds
+*.playground
+
+# Compiled Source
+*.rbc
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.o
+*.so
+*.dylib
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.hprof
+
+# User-specific files
+*.swp
+*.swo
+*~
+*.tmproj
+*.tmproject
+.vscode/
+
+# macOS Trash
+.Trashes
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+
+
